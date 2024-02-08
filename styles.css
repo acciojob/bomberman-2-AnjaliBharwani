@@ -1,41 +1,49 @@
-.grid {
-            display: grid;
-            grid-template-columns: repeat(10, 40px);
-            grid-gap: 2px;
-        }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .cell {
-            width: 40px;
-            height: 40px;
-            background-color: #ccc;
-            border: 1px solid #999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-        }
- .valid {
-            background-color: #ccc;
-        }
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+.grid-container {
+    height: 600px;
+    width: 600px;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    padding: 10px;
+}
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.938);
+    /* background-color: transparent; */
+    border: 1px solid #000000cc;
+    /* padding: 20px; */
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
 
-        .bomb {
-            background-color: #ff6666;
-        }
+.flex-box >  input,button{
+    margin: 0 10px 0 0;
+}
+#flagsLeft{
+    color: white;
+}
 
-        .checked {
-            background-color: #e6e6e6;
-            cursor: default;
-        }
- .flag {
-            background-color: #ffcc00;
-            cursor: pointer;
-        }
-
-        #result {
-            margin-top: 10px;
-            font-size: 20px;
-        }
-
-        #flagsLeft {
-            font-weight: bold;
-        }
+#result{
+    color: white;
+}
